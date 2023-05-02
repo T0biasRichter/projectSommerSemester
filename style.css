@@ -1,0 +1,32 @@
+.scrollmenu{
+    padding-top: 8vw;
+    text-align: center;
+}
+
+.headline{
+    background-color: #646161;
+}
+.scrollmenu ul li{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.scrollmenu ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    font-size: medium;
+}
+.scrollmenu ul li a:hover{
+    background-color: #ff7300;
+    color: white;
+    border-radius: 0.5vw;
+}
+
+body{
+    background-color: #e3e3e3;
+}
