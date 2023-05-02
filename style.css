@@ -1,10 +1,12 @@
 .scrollmenu{
     padding-top: 8vw;
     text-align: center;
+    padding-bottom: 0.1rem;
 }
 
 .headline{
     background-color: #646162;
+    position: sticky;
 }
 .scrollmenu ul li{
     display: inline-block;
@@ -28,5 +30,46 @@
 }
 
 body{
-    background-color: #e3e3e3;
+    background-color: #e1e0e0;
+}
+
+footer{
+    background-color: #ff7300;
+}
+
+.footerContent{
+    box-sizing: border-box;
+    padding-bottom: 5vw;
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+.footer-items{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 33.33%;
+    float: left;
+}
+
+.col{
+    width: 100%;
+}
+
+footer .col{
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+footer .col .footer-items a{
+    text-decoration: none;
+    color: white;
+    text-align: left;
 }
