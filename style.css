@@ -12,12 +12,14 @@
 }
 .headline img{
     display: flex;
+    max-width: 40%;
+    height: auto;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: -6vw;
     margin-top: 1vw;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .scrollmenu ul li{
     display: inline-block;
@@ -75,7 +77,7 @@ html {
 }
 .container{
     max-width: 1170px;
-    margin:auto;
+    margin: auto;
 }
 .row{
     display: flex;
@@ -89,7 +91,7 @@ ul{
     padding: 70px 0;
 }
 .footer-col{
-    width: 25%;
+    width: 20%;
     padding: 0 15px;
 }
 .footer-col h4{
@@ -120,7 +122,7 @@ ul{
     text-decoration: none;
     font-weight: 300;
     color: #bbbbbb;
-    display: block;
+    display: inline-block;
     transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
@@ -128,8 +130,9 @@ ul{
     padding-left: 8px;
 }
 .footer-col .social-links a{
+    font-weight: bold;
     display: inline-block;
-    height: 40px;
+    text-decoration: none;
     width: 40px;
     background-color: rgba(255,255,255,0.2);
     margin:0 10px 10px 0;
@@ -140,8 +143,14 @@ ul{
     transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
-    color: #24262b;
-    background-color: #ffffff;
+    background-color: rgba(10,122,234,255);
+    transform: scale(1.2);
+}
+
+.footer-col .footer-picture ul li img{
+    max-width: 100%;
+    border-radius: 5%;
+    height: auto;
 }
 
 /*responsive*/
@@ -156,5 +165,6 @@ ul{
         width: 100%;
     }
 }
+
 
 
