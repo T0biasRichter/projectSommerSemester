@@ -15,13 +15,6 @@ document.getElementById("toTop").addEventListener("click", function() {
     document.documentElement.scrollTop = 0;
 });
 
-$(document).ready(function() {
 
-    $(".fa-search").click(function() {
-        $(".search-box").toggle();
-        $("input[type='text']").focus();
-    });
-
-});
 
 
