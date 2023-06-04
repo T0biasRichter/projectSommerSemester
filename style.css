@@ -186,11 +186,16 @@ nav .icon-burger .line {
 ul{
     list-style: none;
 }
-.footer{
+footer{
+    margin-top: 18rem;
     background-color: #313131;
-    padding: 70px 0;
+    padding-top: 2rem;
 }
-
+.footer-col-picture{
+    width: 20%;
+    padding-top: 20%;
+    text-align: left;
+}
 .footer-col{
     width: 20%;
     padding: 0 15px;
@@ -245,7 +250,7 @@ ul{
     border-radius: 50%;
 }
 
-.footer-col .footer-picture ul li img{
+.footer-col-picture .footer-picture ul li img{
     max-width: 100%;
     border-radius: 5%;
     height: auto;

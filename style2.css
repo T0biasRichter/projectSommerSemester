@@ -191,7 +191,11 @@ footer{
     background-color: #313131;
     padding-top: 2rem;
 }
-
+.footer-col-picture{
+    width: 20%;
+    padding-top: 20%;
+    text-align: left;
+}
 .footer-col{
     width: 20%;
     padding: 0 15px;
@@ -246,7 +250,7 @@ footer{
     border-radius: 50%;
 }
 
-.footer-col .footer-picture ul li img{
+.footer-col-picture .footer-picture ul li img{
     max-width: 100%;
     border-radius: 5%;
     height: auto;
