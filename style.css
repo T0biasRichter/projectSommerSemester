@@ -38,7 +38,7 @@ nav {
 
 #logo{
     width: 19vw;
-    margin-top: 0.2vw;
+    margin-top: 0.8vw;
     margin-bottom: 0.2vw;
     border-radius: 12px;
 }
@@ -190,6 +190,7 @@ ul{
     background-color: #313131;
     padding: 70px 0;
 }
+
 .footer-col{
     width: 20%;
     padding: 0 15px;
