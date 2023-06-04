@@ -15,6 +15,15 @@ document.getElementById("toTop").addEventListener("click", function() {
     document.documentElement.scrollTop = 0;
 });
 
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('nav');
+    if (window.scrollY > 30) {
+        navbar.classList.add('transparent');
+    } else {
+        navbar.classList.remove('transparent');
+    }
+});
+
 let selection = document.getElementById("fehler-dropdown");
 
 let fehlerBeschreibung = {
