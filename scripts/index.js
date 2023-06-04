@@ -15,7 +15,6 @@ document.getElementById("toTop").addEventListener("click", function() {
     document.documentElement.scrollTop = 0;
 });
 
-
 let selection = document.getElementById("fehler-dropdown");
 
 let fehlerBeschreibung = {

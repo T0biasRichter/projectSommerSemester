@@ -338,7 +338,47 @@ footer{
     margin-top: 6rem;
     width: 50%;
     word-wrap: normal;
+    margin-left: 1vw;
 }
+
+.image {
+    margin-top: 10vw;
+    width: 95%;
+    height: auto;
+    position: relative;
+}
+
+.image img {
+    width: 40vw;
+    height: auto;
+    float: right;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.image .caption {
+    position: absolute;
+    bottom: -2em; /* Adjust the value as per your preference */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.image:hover .caption {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 
 #fehler-dropdown {
     border-radius: 5px;
