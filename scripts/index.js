@@ -15,6 +15,13 @@ document.getElementById("toTop").addEventListener("click", function() {
     document.documentElement.scrollTop = 0;
 });
 
+let darkModeButton = document.getElementById("darkmode");
+darkModeButton.addEventListener("click", function(){
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+
+})
+
 window.addEventListener('scroll', function() {
     var navbar = document.querySelector('nav');
     if (window.scrollY > 30) {
