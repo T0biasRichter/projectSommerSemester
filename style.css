@@ -185,6 +185,68 @@ html {
         }
     }*/
 
+/*Carousel*/
+.carousel {
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    padding-top: 7vw;
+}
+
+.carousel-container {
+    display: flex;
+    animation: carousel-animation 20s infinite;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes carousel-animation {
+    0% {
+        transform: translateX(0);
+    }
+    14.28% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    34.28% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    54.28% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    74.28% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    94.28% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
 @media screen and (max-width: 768px) {
     .links {
         display: none;
