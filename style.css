@@ -255,6 +255,81 @@ nav .icon-burger .line {
     }
 }
 
+/*Content index*/
+#content table{
+    max-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#content table tbody tr td{
+    padding-right: 2vw;
+}
+
+.index-image{
+    width: 30%;
+    height: auto;
+}
+
+/*Ladedrucksteller*/
+#ladedrucksteller-content{
+    width: 70%;
+    height: auto;
+    margin-top: 7%;
+    padding-left: 1vw;
+}
+
+#ladedrucksteller-content .picOne{
+    width: 50%;
+    height: auto;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1vw;
+}
+
+#ladedrucksteller-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#ladedrucksteller-content tbody td{
+    padding-left: 2vw;
+}
+
+#ladedrucksteller-content th, td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+.mail{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.mail:hover{
+    text-decoration: none;
+    color: rgba(222, 118, 9, 0.87);
+}
+
+.list-parts-numbers{
+    border: 1px solid #e1e0e0;
+    background-color: #a6a5a5;
+    border-radius: 0.4vw;
+    padding: 10px;
+}
+
+.list-parts-numbers:hover{
+    transition: 2s ease-in-out;
+    background-color: #bdbcbc;
+}
+
+.list-parts-numbers a{
+    text-decoration: none;
+    color: black;
+}
+
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
