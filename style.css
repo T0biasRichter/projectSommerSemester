@@ -256,6 +256,11 @@ nav .icon-burger .line {
 }
 
 /*Content index*/
+#content{
+    width: 70%;
+    height: auto;
+}
+
 #content table{
     max-width: 100%;
     border-spacing: 0;
@@ -266,9 +271,26 @@ nav .icon-burger .line {
     padding-right: 2vw;
 }
 
+#content h2 a{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+
+#content h2 a:hover{
+    color: #707070;
+}
+
 .index-image{
-    width: 30%;
+    width: 50%;
     height: auto;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 1s ease-in-out;
+}
+
+.index-image:hover{
+    transform: scale(1.03);
 }
 
 /*Ladedrucksteller*/
@@ -279,7 +301,7 @@ nav .icon-burger .line {
     padding-left: 1vw;
 }
 
-#ladedrucksteller-content .picOne{
+.picOne, .picTwo{
     width: 50%;
     height: auto;
     border-radius: 1vw;
@@ -318,10 +340,10 @@ nav .icon-burger .line {
     background-color: #a6a5a5;
     border-radius: 0.4vw;
     padding: 10px;
+    transition: 0.5s ease-in-out;
 }
 
 .list-parts-numbers:hover{
-    transition: 2s ease-in-out;
     background-color: #bdbcbc;
 }
 
