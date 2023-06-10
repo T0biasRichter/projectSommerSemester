@@ -34,17 +34,31 @@
     </label>
 </nav>
 
-<div class="carousel">
-    <div class="carousel-container">
-        <img src="pictures/TurboladerOffen.JPG" alt="Image 1">
-        <img src="pictures/Ventilsitzfräsen.JPG" alt="Image 2">
-        <img src="pictures/Ventilsitzfräsen2.JPG"  alt="Image 3">
-        <img src="pictures/Zylinderkopf.JPG" alt="Image 4">
-        <img src="pictures/Zylinderkopfplanfräsen.JPG" alt="Image 5">
-        <img src="pictures/Zylinderkopfplanfräsen2.JPG" alt="Image 6">
-        <img src="pictures/Zylinderkopfplanschleifen.JPG" alt="Image 7">
-    </div>
-</div>
+
+<!--
+<script>
+    let slideIndex = 0; // Start from 0 to show the first image
+    showSlides();
+
+    // Change the slide every 5 seconds (5000 milliseconds)
+    setInterval(showSlides, 5000);
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("carousel-container")[0].children; // Get the direct children of carousel-container
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+</script>
+-->
+<!-- The dots/circles -->
+
 
 <!--
 <section id = "cards">
@@ -99,8 +113,19 @@
         </tr>
         </tbody>
     </table>
+    <h2>Unser Shop:</h2>
+    <div class="carousel">
+        <div class="carousel-container">
+            <img src="pictures/Shop.jpg" height="2532" width="4044"/>
+            <img src="pictures/Shop2.jpg" height="2572" width="4112"/>
+            <img src="pictures/Shop4.jpg" height="2848" width="4272"/>
+            <img src="pictures/Shop3.jpg" height="2848" width="4272"/>
 
-    <br>
+            <img src="pictures/Shop5.jpg" height="2072" width="3940"/>
+
+
+        </div>
+    </div>
 
     <h2>Unser Standort:</h2>
     <p>Sie finden uns unter 4690 Schwanenstadt, Gürtlerstraße 4</p>
@@ -119,7 +144,7 @@
     <h2><a href="#">Mopedauto Ersatzteile</a></h2>
     <p>Alle Ersatzteile für Ihr Mopedauto – bei MTS in Schwanenstadt oder im Onlineshop! Von der Abgasanlage bie zu Bremsen,
         Kühlung und Varomatik. Fragen Sie jetzt an!</p>
-    <a href="#"><img class="index-image" src="pictures/" alt="Mopedauto"></a>
+    <a href="#"><img class="index-image" src="" alt="Mopedauto"></a>
 
     <br>
     <br>

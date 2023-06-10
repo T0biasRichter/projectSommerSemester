@@ -202,25 +202,29 @@ nav .icon-burger .line {
     }
 }*/
 
-/*Carousel*/
+
 .carousel {
-    width: 40%;
+    width: 60%;
     height: auto;
     overflow: hidden;
     display: block;
-    margin: 0 auto;
-    padding-top: 7vw;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-left: 0;
+    border-radius: 20px;
 }
 
 .carousel-container {
     display: flex;
+    width: 100%; /* Add this line */
     animation: carousel-animation 20s infinite;
 }
 
 .carousel img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Change to 100% */
+    height: auto; /* Remove the height property */
     object-fit: cover;
+    border-radius: 20px;
 }
 
 @keyframes carousel-animation {
@@ -280,6 +284,7 @@ nav .icon-burger .line {
     color: black;
     transition: 0.2s ease-in-out;
 }
+
 
 #content h2 a:hover{
     color: #707070;
@@ -711,6 +716,10 @@ footer{
     color: white;
 }
 
+.dark-mode #content h2 a{
+    color: white;
+}
+
 #darkmode{
     background: none;
     margin-top: 2rem;
@@ -728,3 +737,12 @@ footer{
 #mapsLocation{
     border-radius: 20px;
 }
+
+
+
+
+
+
+
+
+

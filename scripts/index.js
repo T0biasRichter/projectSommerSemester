@@ -1,38 +1,5 @@
-window.onscroll = function() {
-    scrollFunction()
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        document.getElementById("toTop").style.display = "block";
-    } else {
-        document.getElementById("toTop").style.display = "none";
-    }
-}
-
-document.getElementById("toTop").addEventListener("click", function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
-
 let darkModeButton = document.getElementById("darkmode");
-darkModeButton.addEventListener("click", function(){
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-
-})
-
-window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('nav');
-    if (window.scrollY > 30) {
-        navbar.classList.add('transparent');
-    } else {
-        navbar.classList.remove('transparent');
-    }
-});
-
 let selection = document.getElementById("fehler-dropdown");
-
 let fehlerBeschreibung = {
     rauchSchwarz: "<h2>Vermutliche Ursachen für Schwarzrauch:</h2>\n" +
         "<ul>\n" +
@@ -136,14 +103,54 @@ let fehlerBeschreibung = {
         "  <li>Verschmutzung des Verdichters oder Ladeluftkühlers</li>\n" +
         "</ul>\n"
 };
-
 let printToHtml = document.getElementById("fehler");
-selection.addEventListener("change", function (){
-    let selectedOption = this.options[this.selectedIndex];
-    let selectedVal = selectedOption.value;
-    selectedVal = fehlerBeschreibung[selectedVal]; // Use selectedVal as the key to access the description
-    printToHtml.innerHTML = selectedVal; // Corrected the syntax to set innerHTML
+
+
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    init();
 });
 
+function init() {
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            document.getElementById("toTop").style.display = "block";
+        } else {
+            document.getElementById("toTop").style.display = "none";
+        }
+    }
+
+    document.getElementById("toTop").addEventListener("click", function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
 
 
+    darkModeButton.addEventListener("click", function () {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+
+    })
+
+    window.addEventListener('scroll', function () {
+        var navbar = document.querySelector('nav');
+        if (window.scrollY > 30) {
+            navbar.classList.add('transparent');
+        } else {
+            navbar.classList.remove('transparent');
+        }
+    });
+
+
+    selection.addEventListener("change", function () {
+        let selectedOption = this.options[this.selectedIndex];
+        let selectedVal = selectedOption.value;
+        selectedVal = fehlerBeschreibung[selectedVal];
+        printToHtml.innerHTML = selectedVal;
+    });
+
+}
