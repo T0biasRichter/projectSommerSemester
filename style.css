@@ -12,6 +12,10 @@ body{
     scroll-behavior: smooth;
 }
 
+.motoreninstandsetzung{
+    background-color: #222;
+}
+
 html {
     position: relative;
     min-height:900px;
@@ -324,6 +328,35 @@ nav .icon-burger .line {
     vertical-align: top;
     border-bottom: 1px solid #ddd;
 }
+
+/*Motoreninstandsetzung-Cards*/
+.back ol{
+    font-size: 15.5px;
+    text-align: left;
+}
+
+/*Zylinderköpfe*/
+.image-container {
+    display: flex;
+}
+
+.zylinderkopf-image{
+    width: 40%;
+    height: auto;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    float: right;
+}
+
+.image-container img {
+    width: 25%;
+    height: auto;
+    margin-right: 5%;
+    object-fit: cover;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 .mail{
     font-weight: bold;
     text-decoration: none;
