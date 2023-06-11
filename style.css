@@ -266,6 +266,7 @@ nav .icon-burger .line {
 /*Content index*/
 #content{
     width: 70%;
+    padding-left: 3rem;
     height: auto;
 }
 
@@ -284,7 +285,6 @@ nav .icon-burger .line {
     color: black;
     transition: 0.2s ease-in-out;
 }
-
 
 #content h2 a:hover{
     color: #707070;
@@ -307,7 +307,7 @@ nav .icon-burger .line {
     width: 70%;
     height: auto;
     margin-top: 7%;
-    padding-left: 1vw;
+    padding-left: 3rem;
 }
 
 .picOne, .picTwo{
@@ -340,6 +340,20 @@ nav .icon-burger .line {
     text-align: left;
 }
 
+#cards .flip .back h2{
+    margin-top: 20%;
+}
+
+#cards .flip .back h2 a{
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: 0.2s ease-in-out;
+}
+
+#cards .flip .back h2 a:hover{
+    color: orange;
+}
+
 /*Zylinderköpfe*/
 .image-container {
     display: flex;
@@ -370,7 +384,7 @@ nav .icon-burger .line {
 
 .mail:hover{
     text-decoration: none;
-    color: rgba(222, 118, 9, 0.87);
+    color: orange;
 }
 
 .list-parts-numbers{
