@@ -47,12 +47,7 @@ nav {
     border-radius: 12px;
 }
 
-/* Media query for screens with a maximum width of 768px */
-@media screen and (max-width: 768px) {
-    #logo {
-        width: 50%; /* Adjust the logo width as needed */
-    }
-}
+
 
 /* Media query for screens with a maximum width of 480px */
 @media screen and (max-width: 480px) {
@@ -76,12 +71,12 @@ nav .links {
     align-items: center;
 }
 
-nav .links li {
+nav .links .navLink {
     list-style: none;
 }
 
-nav .links a {
-    display: block;
+nav .links .navLink a {
+    display: flex;
     padding: 1em;
     font-size: 16px;
     font-weight: bold;
@@ -98,11 +93,11 @@ nav .links a {
     }
 }
 
-nav ul li {
+nav ul .navLink {
     position: relative;
 }
 
-nav ul li::after {
+nav ul .navLink::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -113,11 +108,11 @@ nav ul li::after {
     transition: width 0.5s ease-in-out;
 }
 
-nav ul li:hover::after {
+nav ul .navLink:hover::after {
     animation: underline 0.5s forwards;
 }
 
-nav ul li:not(:hover)::after {
+nav ul .navLink:not(:hover)::after {
     animation: underline-reverse 0.5s forwards;
 }
 
@@ -152,7 +147,7 @@ nav .icon-burger .line {
     transition: all .3s ease-in-out;
 }
 
-/*@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     #logo {
         width: 65vw;
         margin-top: 1.4vw;
@@ -200,7 +195,7 @@ nav .icon-burger .line {
         margin-right: 1vw;
         margin-bottom: 1vw;
     }
-}*/
+}
 
 
 .carousel {
@@ -735,13 +730,13 @@ footer{
 }
 
 #darkmode{
+    display: block;
     background: none;
-    margin-top: 2rem;
-    border: 0;
-    color: white;
-    margin-left: 14rem;
+    color: var(--white-color);
+    border: none;
     font-size: 20px;
 }
+
 
 #locationCont{
     margin-top: 6rem;
