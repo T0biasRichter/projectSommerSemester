@@ -42,7 +42,7 @@ nav {
 }
 
 #logo {
-    width: 19vw; /* Set the logo width relative to the viewport width */
+    width: 25vw; /* Set the logo width relative to the viewport width */
     height: auto; /* Maintain the aspect ratio */
     border-radius: 12px;
 }
@@ -709,6 +709,12 @@ footer{
         margin-top: 2vw;
     }
 }
+@media(max-width: 830px){
+    #cards{
+        margin-top: 4rem;
+        grid-template-columns: 100%;
+    }
+}
 
 #InstandsetzungCont{
     margin-top: 7rem;
@@ -746,9 +752,24 @@ footer{
 }
 
 
+#geschichteCont{
+    margin-top: 7vw;
+    width: 60%;
+    word-break: normal;
+}
 
+.image img{
+    width: 30%;
+    height: auto;
+    float: right;
+    margin-top: 10vw;
+    border-radius: 20px;
+}
 
-
+.image img:hover{
+    transform: scale(1.03);
+    transition: ease-in-out 1s;
+}
 
 
 
