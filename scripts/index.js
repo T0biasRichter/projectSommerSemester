@@ -154,3 +154,19 @@ function init() {
     });
 
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownBtn = document.querySelector(".dropdown-btn");
+    const dropdownContent = document.querySelector(".dropdown-content");
+
+    dropdownBtn.addEventListener("click", function() {
+        if (dropdownContent.style.maxHeight) {
+            dropdownContent.style.maxHeight = null;
+            dropdownBtn.classList.remove("minus");
+        } else {
+            dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+            dropdownBtn.classList.add("minus");
+        }
+    });
+});
+
