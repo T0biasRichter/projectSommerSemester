@@ -416,7 +416,7 @@ nav .icon-burger .line {
 
 /*Motor-Generalüberholung*/
 .engines{
-    width: 50%;
+    width: 20%;
     height: auto;
 }
 
@@ -424,8 +424,8 @@ nav .icon-burger .line {
     display: flex;
 }
 
-.image-container-engine .engine {
-    width: 40%;
+.image-container-engine .engines {
+    width: 35%;
     height: auto;
     margin-right: 5%;
     object-fit: cover;
@@ -601,9 +601,6 @@ footer{
     padding-top:2rem;
     padding-bottom:2rem;
     width: 100%;
-}
-#cards .flip{
-
 }
 
 #content{
