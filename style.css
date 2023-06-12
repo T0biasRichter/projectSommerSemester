@@ -817,6 +817,15 @@ footer{
     color: white;
 }
 
+#content h2 a{
+    color: black;
+}
+
+#content h2 a:hover{
+    text-decoration: none;
+}
+
+
 #darkmode{
     display: block;
     background: none;
