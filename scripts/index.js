@@ -127,22 +127,6 @@ function init() {
         document.documentElement.scrollTop = 0;
     });
 
-
-    /*darkModeButton.addEventListener("click", function () {
-        const body = document.body;
-        const button = this;
-
-        body.classList.toggle('dark-mode');
-
-        if (body.classList.contains('dark-mode')) {
-            button.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
-            console.log(button.innerHTML);
-        } else {
-            button.innerHTML = '<ion-icon name="moon-outline"></ion-icon>';
-            console.log(button.innerHTML);
-        }
-    });*/
-
     const body = document.body;
 
     // Überprüfe, ob der Dark Mode im localStorage gespeichert ist

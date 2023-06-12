@@ -62,6 +62,8 @@ nav.transparent {
     margin-left: 1.5vw;
     margin-right: 1.5vw;
     margin-bottom: 1.5vw;
+    width: 60%;
+    line-break: normal;
 }
 
 nav .links {
@@ -642,7 +644,7 @@ footer{
     font-family: 'Roboto Mono', sans-serif;
     z-index: 0;
     overflow: hidden;
-    margin-top: 6rem;
+    margin-top: 5rem;
     padding-top:2rem;
     padding-bottom:2rem;
     width: 100%;
@@ -866,10 +868,11 @@ footer{
     }
 }
 
-#geschichteCont{
-    margin-top: 7vw;
-    width: 60%;
-    word-break: normal;
+.geschichte-Container ul li{
+    list-style-type: disc;
+}
+.geschichte-Container ul{
+    padding-left: 3vw;
 }
 
 .image img{
@@ -883,4 +886,21 @@ footer{
 .image img:hover{
     transform: scale(1.03);
     transition: ease-in-out 1s;
+}
+
+#textWithImg{
+    display: flex;
+    align-items: center;
+}
+
+#imageText{
+    width: 25%;
+    height: auto;
+    flex: 0 0 auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+#textNexttoImage{
+    flex: 1 1 auto;
 }
