@@ -265,13 +265,18 @@ nav .icon-burger .line {
     height: auto;
 }
 
+#content h1{
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 #content table{
     max-width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
 }
 
-#content table tbody tr td{
+.index-table tbody tr td{
     padding-right: 2vw;
 }
 
@@ -305,6 +310,11 @@ nav .icon-burger .line {
     padding-left: 3rem;
 }
 
+#ladedrucksteller-content h1{
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 .picOne, .picTwo{
     width: 50%;
     height: auto;
@@ -335,15 +345,17 @@ nav .icon-burger .line {
     text-align: left;
 }
 
-
-
-#cards .flip .back h2 a{
+.middle-Text a{
     text-decoration: none;
     color: var(--primary-color);
     transition: 0.2s ease-in-out;
 }
 
-#cards .flip .back h2 a:hover{
+.middle-Text{
+    padding-top: 20%;
+}
+
+.middle-Text a:hover{
     color: orange;
 }
 
@@ -395,6 +407,30 @@ nav .icon-burger .line {
 .list-parts-numbers a{
     text-decoration: none;
     color: black;
+}
+
+/*Mopedauto*/
+.mopedauto-table tbody tr td{
+    padding-right: 15vw;
+}
+
+/*Motor-Generalüberholung*/
+.engines{
+    width: 50%;
+    height: auto;
+}
+
+.image-container-engine {
+    display: flex;
+}
+
+.image-container-engine .engine {
+    width: 40%;
+    height: auto;
+    margin-right: 5%;
+    object-fit: cover;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes fade {
@@ -592,6 +628,16 @@ footer{
     transition-duration: .5s;
     transition-property: transform, opacity;
     z-index: 0;
+}
+
+.back p a{
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: 0.2s ease-in-out;
+}
+
+.back p a:hover{
+    color: orange;
 }
 
 .flip > .front {
