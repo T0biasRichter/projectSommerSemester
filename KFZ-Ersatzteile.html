@@ -32,6 +32,69 @@
     </label>
 </nav>
 
+<div id="selectContainer">
+    <label for="anfragenSelection">Wähle deine Anfrage aus</label><br>
+    <select name="anfrage" id="anfragenSelection">
+        <option value="Turbolader">Turbolader</option>
+        <option value="Motorenersatzteile">Motorenersatzteile</option>
+        <option value="Zylinderkopf">Zylinderkopf</option>
+    </select>
+</div>
+
+<div id="optionalAnfragenForm">
+
+</div>
+
+
+<div id="anfragen-container">
+    <div id="Fahrzeugdaten">
+        <h1>2) Fahrzeugdaten</h1>
+        <form action="send_email.php" method="POST">
+            <label for="hersteller">Fahrzeughersteller:</label><br>
+            <input type="text" id="hersteller" name="marke" placeholder="Mercedes, BMW, Audi" required><br>
+
+            <label for="typ">Typ:</label><br>
+            <input type="text" id="typ" name="typ" required><br>
+
+            <label for="baujahr">Baujahr/Erstzulassung:</label><br>
+            <input type="text" id="baujahr" name="baujahr" required><br>
+
+            <label for="motorkennbuchStabe">Motorkennbuchstabe:</label><br>
+            <input type="text" id="motorkennbuchStabe" name="motorkennbuchStabe" required><br>
+
+            <label for="hubraum">Hubraum in ccm</label><br>
+            <input type="text" id="hubraum" name="hubraum" required><br>
+
+            <label for="leistung">KW/PS</label><br>
+            <input type="text" id="leistung" name="hubraum" required><br>
+        </form>
+    </div>
+
+    <div id="Firmendaten">
+        <h1>3) Firmendaten</h1>
+        <form action="send_email.php" method="POST">
+            <label for="Firma">Firma:</label><br>
+            <input type="text" id="Firma" name="Firma" required><br>
+
+            <label for="kontakt">Kontaktperson</label><br>
+            <input type="text" id="kontakt" name="kontakt" required><br>
+
+            <label for="Telefon">Telefon:</label><br>
+            <input type="text" id="Telefon" name="Telefon" required><br>
+
+            <label for="Fax">Fax:</label><br>
+            <input type="text" id="Fax" name="Fax" required><br>
+
+            <label for="Email">Email</label><br>
+            <input type="text" id="Email" name="Email" required><br>
+
+            <label for="Bemerkungen">Bemerkungen:</label><br>
+            <textarea id="Bemerkungen" name="Bemerkungen" rows="5" cols="30" required></textarea><br>
+        </form>
+    </div>
+</div>
+
+
 
 <button id="toTop"><i class="fa-solid fa-chevron-up" style="color: #ffffff;"></i></button>
 <footer class="footer">

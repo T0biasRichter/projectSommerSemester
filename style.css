@@ -913,3 +913,18 @@ footer{
 #textNexttoImage{
     flex: 1 1 auto;
 }
+#selectContainer {
+    margin-top: 6rem;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    width: 50%;
+}
+
+#anfragen-container{
+    margin-top: 6rem;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    width: 50%;
+}
+
+

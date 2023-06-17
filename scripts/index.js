@@ -1,5 +1,6 @@
 const darkModeButton = document.getElementById("darkmode");
 const selection = document.getElementById("fehler-dropdown");
+const anfragenSelection = document.getElementById("anfragenSelection");
 const fehlerBeschreibung = {
     rauchSchwarz: "<h2>Vermutliche Ursachen für Schwarzrauch:</h2>\n" +
         "<ul>\n" +
@@ -103,8 +104,8 @@ const fehlerBeschreibung = {
         "  <li>Verschmutzung des Verdichters oder Ladeluftkühlers</li>\n" +
         "</ul>\n"
 };
-const printToHtml = document.getElementById("fehler");
-
+const fehlerHTML = document.getElementById("fehler");
+const selectionResult = document.getElementById("optionalAnfragenForm");
 
 
 
@@ -149,6 +150,13 @@ function init() {
         localStorage.setItem("darkModeEnabled", body.classList.contains('dark-mode'));
     });
 
+    anfragenSelection.addEventListener("change", function () {
+        let selectedOption = this.options[this.selectedIndex];
+        let selectedVal = selectedOption.value;
+        selectedVal = anfragen[selectedVal];
+        selectionResult.innerHTML = selectedVal;
+    });
+
 
 
     window.addEventListener('scroll', function () {
@@ -165,7 +173,7 @@ function init() {
         let selectedOption = this.options[this.selectedIndex];
         let selectedVal = selectedOption.value;
         selectedVal = fehlerBeschreibung[selectedVal];
-        printToHtml.innerHTML = selectedVal;
+        fehlerHTML.innerHTML = selectedVal;
     });
 
 }
