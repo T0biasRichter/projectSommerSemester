@@ -298,7 +298,6 @@ nav .icon-burger .line {
     padding: 10px;
     text-align: left;
     vertical-align: top;
-    border-bottom: 1px solid #ddd;
 }
 
 .dropdown-btn {
@@ -811,6 +810,10 @@ footer{
 .dark-mode{
     background-color: #3d3c3c;
     color: white;
+}
+
+.dark-mode .dropdown-content{
+    background-color: #525050;
 }
 
 .dark-mode #content h2 a{
