@@ -837,6 +837,10 @@ footer{
     font-size: 20px;
 }
 
+#darkmode:focus{
+    outline: none;
+}
+
 
 #locationCont{
     margin-top: 6rem;
@@ -916,18 +920,45 @@ footer{
 #textNexttoImage{
     flex: 1 1 auto;
 }
-#selectContainer {
-    margin-top: 6rem;
+
+#anfragen-container{
+    margin-top: 7rem;
     margin-left: 3rem;
     margin-right: 1rem;
     width: 50%;
 }
 
-#anfragen-container{
-    margin-top: 6rem;
-    margin-left: 3rem;
-    margin-right: 1rem;
-    width: 50%;
+#anfragen-container input, textarea{
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+#anfragen-container textarea{
+    height: 100px;
+}
+
+#anfragen-container select{
+    margin-bottom: 3rem;
+    width: 30%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+#anfragen-container label{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#anfragen-container input:focus, textarea:focus, select:focus{
+    outline: none;
 }
 
 

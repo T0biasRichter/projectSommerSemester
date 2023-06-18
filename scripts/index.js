@@ -105,9 +105,14 @@ const fehlerBeschreibung = {
         "</ul>\n"
 };
 const fehlerHTML = document.getElementById("fehler");
-const selectionResult = document.getElementById("optionalAnfragenForm");
 
+let ersatzteileHTML= document.getElementById("ersatzteileFormDiv");
+let turboladerHTML= document.getElementById("turboladerFormDiv");
+let zylinderkopfHTML= document.getElementById("zylinderkopfFormDiv");
 
+zylinderkopfHTML.style.display = "none";
+turboladerHTML.style.display = "none";
+ersatzteileHTML.style.display = "none";
 
 
 function init() {
@@ -150,11 +155,21 @@ function init() {
         localStorage.setItem("darkModeEnabled", body.classList.contains('dark-mode'));
     });
 
-    anfragenSelection.addEventListener("change", function () {
-        let selectedOption = this.options[this.selectedIndex];
-        let selectedVal = selectedOption.value;
-        selectedVal = anfragen[selectedVal];
-        selectionResult.innerHTML = selectedVal;
+    anfragenSelection.addEventListener("change", function(){
+       if(this.value === "Motorenersatzteile") {
+           ersatzteileHTML.style.display = "block";
+           turboladerHTML.style.display = "none";
+           zylinderkopfHTML.style.display = "none";
+       } else if(this.value === "Turbolader") {
+              ersatzteileHTML.style.display = "none";
+              turboladerHTML.style.display = "block";
+              zylinderkopfHTML.style.display = "none";
+       }
+         else if(this.value === "Zylinderkopf") {
+              ersatzteileHTML.style.display = "none";
+              turboladerHTML.style.display = "none";
+              zylinderkopfHTML.style.display = "block";
+       }
     });
 
 

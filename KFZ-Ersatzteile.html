@@ -32,21 +32,84 @@
     </label>
 </nav>
 
-<div id="selectContainer">
-    <label for="anfragenSelection">Wähle deine Anfrage aus</label><br>
-    <select name="anfrage" id="anfragenSelection">
-        <option value="Turbolader">Turbolader</option>
-        <option value="Motorenersatzteile">Motorenersatzteile</option>
-        <option value="Zylinderkopf">Zylinderkopf</option>
-    </select>
-</div>
-
-<div id="optionalAnfragenForm">
-
-</div>
-
 
 <div id="anfragen-container">
+    <div id="selectContainer">
+        <label for="anfragenSelection">Wähle deine Anfrage aus</label><br>
+        <select name="anfrage" id="anfragenSelection">
+            <option value="Turbolader">Turbolader</option>
+            <option value="Motorenersatzteile">Motorenersatzteile</option>
+            <option value="Zylinderkopf">Zylinderkopf</option>
+        </select>
+    </div>
+
+    <div id="ersatzteileFormDiv">
+        <h1>Motorteile-Anfrage</h1>
+        <form id="ersatzteileForm">
+            <h2>Benötigte Teile</h2>
+
+            <label for="ersatzteile">Ersatzteile:</label><br>
+            <textarea  id="ersatzteile" name="ersatzteile" rows="4"  cols="30" required placeholder="Geben Sie bitte heir die benötigten Teile ein"></textarea><br>
+        </form>
+    </div>
+
+    <div id="zylinderkopfFormDiv">
+        <h1>ZylinderKopf-Anfrage</h1>
+        <form id="zylinderkopfForm">
+            <h3>Benötigte Teile</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="zylinderkopfKomplett" name="teile[]" value="Zylinderkopf komplett">
+                    <label for="zylinderkopfKomplett">Zylinderkopf komplett</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="zylinderkopfBlank" name="teile[]" value="Zylinderkopf blank (ohne Nockenwelle und Ventile)">
+                    <label for="zylinderkopfBlank">Zylinderkopf blank (ohne Nockenwelle und Ventile)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="zylinderkopfSchrauben" name="teile[]" value="Zylinderkopfschrauben">
+                    <label for="zylinderkopfSchrauben">Zylinderkopfschrauben</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="zylinderkopfDichtung" name="teile[]" value="Zylinderkopfdichtung">
+                    <label for="zylinderkopfDichtung">Zylinderkopfdichtung</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="zylinderkopfDichtsatz" name="teile[]" value="Zylinderkopfdichtsatz">
+                    <label for="zylinderkopfDichtsatz">Zylinderkopfdichtsatz</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="nockenwelle" name="teile[]" value="Nockenwelle">
+                    <label for="nockenwelle">Nockenwelle</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="einlassventil" name="teile[]" value="Einlassventil">
+                    <label for="einlassventil">Einlassventil</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="auslassventil" name="teile[]" value="Auslassventil">
+                    <label for="auslassventil">Auslassventil</label>
+                </li>
+            </ul>
+
+        </form>
+
+    </div>
+
+    <div id="turboladerFormDiv">
+        <h1>Turbolader-Anfrage</h1>
+        <form id="turboladerForm">
+            <h3>Turbolader-Typenschild</h3>
+            <label for="turboladerHersteller">Artikelnummer Turbolader-Hersteller:</label><br>
+            <input type="text" id="turboladerHersteller" name="turboladerHersteller" required placeholder="Geben Sie die benötigten Teile ein"><br>
+
+            <label for="fahrzeugHersteller">Artikelnummer Fahrzeughersteller:</label><br>
+            <input type="text" id="fahrzeugHersteller" name="fahrzeugHersteller" required><br>
+
+        </form>
+
+    </div>
+
     <div id="Fahrzeugdaten">
         <h1>2) Fahrzeugdaten</h1>
         <form action="send_email.php" method="POST">
