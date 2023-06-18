@@ -45,7 +45,7 @@
 
     <div id="ersatzteileFormDiv">
         <h1>Motorteile-Anfrage</h1>
-        <form id="ersatzteileForm">
+        <form id="ersatzteileForm" action="send_email.php" method="POST">
             <h2>Benötigte Teile</h2>
 
             <label for="ersatzteile">Ersatzteile:</label><br>
@@ -55,7 +55,7 @@
 
     <div id="zylinderkopfFormDiv">
         <h1>ZylinderKopf-Anfrage</h1>
-        <form id="zylinderkopfForm">
+        <form id="zylinderkopfForm" action="send_email.php" method="POST">
             <h3>Benötigte Teile</h3>
             <ul>
                 <li>
@@ -98,7 +98,7 @@
 
     <div id="turboladerFormDiv">
         <h1>Turbolader-Anfrage</h1>
-        <form id="turboladerForm">
+        <form id="turboladerForm" action="send_email.php" method="POST">
             <h3>Turbolader-Typenschild</h3>
             <label for="turboladerHersteller">Artikelnummer Turbolader-Hersteller:</label><br>
             <input type="text" id="turboladerHersteller" name="turboladerHersteller" required placeholder="Geben Sie die benötigten Teile ein"><br>
