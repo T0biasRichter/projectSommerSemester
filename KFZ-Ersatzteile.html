@@ -98,7 +98,7 @@
 
     <div id="turboladerFormDiv">
         <h1>Turbolader-Anfrage</h1>
-        <form id="turboladerForm" action="send_email.php" method="POST">
+        <form id="turboladerForm">
             <h3>Turbolader-Typenschild</h3>
             <label for="turboladerHersteller">Artikelnummer Turbolader-Hersteller:</label><br>
             <input type="text" id="turboladerHersteller" name="turboladerHersteller" required placeholder="Geben Sie die benötigten Teile ein"><br>
@@ -112,24 +112,29 @@
 
     <div id="Fahrzeugdaten">
         <h1>2) Fahrzeugdaten</h1>
-        <form action="send_email.php" method="POST">
-            <label for="hersteller">Fahrzeughersteller:</label><br>
-            <input type="text" id="hersteller" name="marke" placeholder="Mercedes, BMW, Audi" required><br>
+        <form id="submit" action="#">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="maxmustermann@example.com" required><br>
 
-            <label for="typ">Typ:</label><br>
-            <input type="text" id="typ" name="typ" required><br>
+            <label for="hersteller">Fahrzeughersteller:</label><br>
+            <input type="text" id="hersteller" name="marke" placeholder="Mercedes, BMW, Audi,..." required><br>
+
+            <label for="typ">Modell:</label><br>
+            <input type="text" id="typ" name="typ" placeholder="Q4, X5, M330i, C63,..." required><br>
 
             <label for="baujahr">Baujahr/Erstzulassung:</label><br>
-            <input type="text" id="baujahr" name="baujahr" required><br>
+            <input type="number" id="baujahr" name="baujahr" placeholder="2018" required><br>
 
             <label for="motorkennbuchStabe">Motorkennbuchstabe:</label><br>
-            <input type="text" id="motorkennbuchStabe" name="motorkennbuchStabe" required><br>
+            <input type="text" id="motorkennbuchStabe" placeholder="N47, N55, B48,..." name="motorkennbuchStabe" required><br>
 
-            <label for="hubraum">Hubraum in ccm</label><br>
-            <input type="text" id="hubraum" name="hubraum" required><br>
+            <label for="hubraum">Hubraum in ccm:</label><br>
+            <input type="number" id="hubraum" name="hubraum" placeholder="1600" required><br>
 
-            <label for="leistung">KW/PS</label><br>
-            <input type="text" id="leistung" name="hubraum" required><br>
+            <label for="leistung">Leistung (PS):</label><br>
+            <input type="number" id="leistung" name="leistung" placeholder="110" required><br>
+
+            <input type="submit" value="Send">
         </form>
     </div>
 
@@ -148,13 +153,14 @@
             <label for="Fax">Fax:</label><br>
             <input type="text" id="Fax" name="Fax" required><br>
 
-            <label for="Email">Email</label><br>
-            <input type="text" id="Email" name="Email" required><br>
+            <label for="E-mail">Email</label><br>
+            <input type="text" id="E-mail" name="Email" required><br>
 
             <label for="Bemerkungen">Bemerkungen:</label><br>
             <textarea id="Bemerkungen" name="Bemerkungen" rows="5" cols="30" required></textarea><br>
         </form>
     </div>
+    <button id="senden" type="submit" form="turboladerForm" value="Submit">Senden</button>
 </div>
 
 
@@ -213,5 +219,64 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    const hersteller = document.getElementById('hersteller');
+    const typ = document.getElementById('typ');
+    const baujahr = document.getElementById('baujahr');
+    const kennBuchstabe = document.getElementById('motorkennbuchStabe');
+    const hubraum = document.getElementById('hubraum');
+    const leistung = document.getElementById('leistung');
+    const email = document.getElementById('email');
+    const submit = document.getElementById('submit');
+
+    submit.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        let ebody = `
+        <h1>Email: </h1>${email.value}
+        <br>
+        <h1>Hersteller: </h1>${hersteller.value}
+        <br>
+        <h1>Typ: </h1>${typ.value}
+        <br>
+        <h1>Baujahr: </h1>${baujahr.value}
+        <br>
+        <h1>Motorkennbuchstabe: </h1>${kennBuchstabe.value}
+        <br>
+        <h1>Hubraum: </h1>${hubraum.value}
+        <br>
+        <h1>Leistung: </h1>${leistung.value}
+        `;
+
+        if(baujahr.value > 2023 || baujahr.value < 1900){
+            alert("Bitte geben Sie ein gültiges Baujahr ein!");
+            return;
+        }
+        if(kennBuchstabe.value.length > 4){
+            alert("Bitte geben Sie einen gültigen Motorkennbuchstaben ein!");
+            return;
+        }
+        if(hubraum.value < 0 || hubraum.value > 10000){
+            alert("Bitte geben Sie einen gültigen Hubraum ein!");
+            return;
+        }
+        if(leistung.value < 0 || leistung.value > 1700){
+            alert("Bitte geben Sie eine gültige Leistung ein!");
+            return;
+        }
+
+        Email.send({
+            SecureToken : "0cd1657d-56ae-4a9d-b28e-30c56c08fdae",
+            To : 'b.wilflingseder@students.htl-leonding.ac.at',
+            From : 'benjamin.wilflingseder@gmail.com',
+            Subject : 'Anfrage-Ersatzteile',
+            Body : ebody
+        }).then(
+            message => alert(message)
+        );
+    });
+</script>
+
 </body>
 </html>
